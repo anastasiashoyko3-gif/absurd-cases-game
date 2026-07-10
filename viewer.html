@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TV — Вечір Абсурдних Справ</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <main class="shell viewerShell">
+    <div class="eyebrow">public screen</div>
+    <h1>Вечір Абсурдних Справ</h1>
+
+    <section class="panel narrow" id="viewerJoinCard">
+      <h2>Підключити TV-екран</h2>
+      <input id="viewerCode" placeholder="Код гри"/>
+      <button id="viewerJoinBtn">Відкрити екран</button>
+      <p id="viewerMsg" class="error"></p>
+    </section>
+
+    <section class="panel hidden viewerCard" id="viewerCard">
+      <div id="viewerState">Завантаження...</div>
+    </section>
+  </main>
+  <script type="module" src="/js/viewer.js"></script>
+</body>
+</html>
