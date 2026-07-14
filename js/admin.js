@@ -13,6 +13,7 @@ $('rerollBtn').onclick=rerollCase;
 $('judgePhraseBtn').onclick=showJudgePhrase;
 $('chaosCardBtn').onclick=addChaosCard;
 $('lastWordBtn').onclick=addLastWord;
+$('allVsOneBtn').onclick=addAllVsOne;
 $('guiltyBtn').onclick=()=>judgeVerdict('guilty');
 $('innocentBtn').onclick=()=>judgeVerdict('innocent');
 $('hostTheme').onchange=saveTheme;
@@ -363,6 +364,10 @@ async function addChaosCard(){
 
 async function addLastWord(){
   await addCaseEvent('Останнє слово',randomFrom(lastWordCards));
+}
+
+async function addAllVsOne(){
+  await addCaseEvent('Усі проти одного','Захист звільнений через моральну втому. Усі гравці тимчасово працюють на обвинувачення, а підсудний має захищатися сам.');
 }
 
 async function addCaseEvent(type,text){
